@@ -1,7 +1,7 @@
 import { useCart } from '../context/useCart'
 
 export default function CartItem({ item }) {
-  const { increaseQuantity, decreaseQuantity, removeFromCart } = useCart()
+  const { increaseQuantity, decreaseQuantity, removeItem, removeFromCart } = useCart()
 
   return (
     <article className="cart-item">
@@ -31,7 +31,7 @@ export default function CartItem({ item }) {
       <button
         type="button"
         className="remove-button"
-        onClick={() => removeFromCart(item.id)}
+        onClick={() => (removeItem ? removeItem(item.id) : removeFromCart(item.id))}
         aria-label={`Remove ${item.name} from cart`}
       >
         ×

@@ -1,1 +1,7 @@
-export { default } from './components/ProductCatalog'
+import ProductCatalog from './components/ProductCatalog'
+
+export function ProductList() {
+  return <ProductCatalog />
+}
+
+export default ProductList

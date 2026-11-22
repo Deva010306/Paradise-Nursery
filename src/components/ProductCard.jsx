@@ -1,7 +1,7 @@
 import { useCart } from '../context/useCart'
 
 export default function ProductCard({ plant }) {
-  const { addToCart, cart } = useCart()
+  const { addItem, addToCart, cart } = useCart()
   const inCart = cart.find((item) => item.id === plant.id)
 
   return (
@@ -17,7 +17,11 @@ export default function ProductCard({ plant }) {
         </div>
         <div className="product-footer">
           <strong>${plant.price.toFixed(2)}</strong>
-          <button type="button" className="add-button" onClick={() => addToCart(plant)}>
+          <button
+            type="button"
+            className="add-button"
+            onClick={() => (addItem ? addItem(plant) : addToCart(plant))}
+          >
             <span aria-hidden="true">+</span>
             {inCart ? 'Add another' : 'Add to cart'}
           </button>

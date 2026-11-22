@@ -1,6 +1,6 @@
 # Paradise Nursery
 
-A responsive React and Vite e-commerce application for browsing and purchasing houseplants.
+A responsive React and Vite e-commerce application for browsing and purchasing houseplants at Paradise Nursery.
 
 ## Features
 

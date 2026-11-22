@@ -5,10 +5,12 @@ export default function AboutUs() {
     <main className="about-page">
       <section className="about-card">
         <p className="eyebrow dark">Our story</p>
-        <h1>Plants, thoughtfully chosen.</h1>
+        <h1>Paradise Nursery</h1>
         <p>
           Paradise Nursery connects plant lovers with healthy, characterful houseplants
-          selected for beauty, resilience, and everyday living.
+          selected for beauty, resilience, and everyday living. Our team carefully
+          sources every plant and provides practical care guidance so that beginners
+          and experienced plant lovers can enjoy greener, healthier homes.
         </p>
         <Link className="primary-button" to="/shop">Explore plants</Link>
       </section>

@@ -1,6 +1,8 @@
 import { useEffect, useMemo } from 'react'
 import { Provider, useDispatch, useSelector } from 'react-redux'
 import {
+  addItem,
+  removeItem,
   addToCart,
   clearCart,
   decreaseQuantity,
@@ -32,7 +34,9 @@ function CartStateProvider({ children }) {
     cart,
     cartCount,
     cartTotal,
+    addItem: (plant) => dispatch(addItem(plant)),
     addToCart: (plant) => dispatch(addToCart(plant)),
+    removeItem: (id) => dispatch(removeItem(id)),
     increaseQuantity: (id) => dispatch(increaseQuantity(id)),
     decreaseQuantity: (id) => dispatch(decreaseQuantity(id)),
     removeFromCart: (id) => dispatch(removeFromCart(id)),
